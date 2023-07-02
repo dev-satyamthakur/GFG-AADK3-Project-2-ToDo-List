@@ -30,12 +30,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    // TODO 0: Enable ViewBinding
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    def room_version = "2.5.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
 
-    // TODO 1: Add RoomDB dependencies
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
